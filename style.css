@@ -7,21 +7,117 @@
 body {
     align-content: center;
     margin: auto;
-    margin-top: 2rem;
     max-width: 800px;
 }
-.right {
+main {
+    padding: 2rem;
+    background-color: antiquewhite;
+}
+.header {
     text-align: right;
 }
 .address-strong {
     font-weight: bold;
 }
+address {
+    font-size: 110%;
+}
 a {
     text-decoration: none;
-    color: green;
+    color: maroon;
     font-weight: bold;
+    padding: 0 0.5em;
+}
+a:hover {
+    background-color: #f6c2c2;
+    border-radius: 1em;
+}
+p, dl {
+    text-align: justify;
+    hyphens: auto;
+    line-height: 150%;
+}
+.motto-cite {
+    font-style: italic;
 }
 
-cite {
-    
+.signature {
+    margin-top: 5rem;
+}
+dt {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+dd {
+    font-style: italic;
+}
+#footer {
+    text-align: center;
+    margin-top: 5rem;
+    border-top: 1px solid black;
+}
+
+.date {
+    border-radius: 1em;
+    margin: 0 0.5em;
+    padding: 0 0.5em;
+    border: 3px dotted transparent;
+    font-style: italic;
+    cursor: pointer;
+}
+.date:hover {
+    border: 3px dotted purple;
+}
+.remember {
+    display: none;
+    /* TODO */
+    transition: all 1s ease;
+}
+.date:hover + .remember {
+    display: inline;
+
+}
+
+
+
+ul li {
+    list-style-type: upper-roman;
+}
+ol li:hover {
+    background-color: aliceblue;
+}
+
+ol li {
+    padding-bottom: 0.8em;
+}
+
+q {
+    quotes: "«" "»" "“" "”";
+}
+
+.wrong {
+    text-decoration: underline red wavy 1px;
+}
+.pabajo {
+    vertical-align: text-top;
+}
+
+li:first-child {
+    color: maroon;
+}
+h2::before, ul li::before, dd {
+    content: '✎ ';
+    color: maroon;
+}
+
+p:first-line {
+    font-variant: small-caps;
+}
+p::first-letter {
+    color: maroon;
+    font-size: 2em;
+}
+
+p {
+    transform: skew(10deg);
 }
