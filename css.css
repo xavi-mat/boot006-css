@@ -6,4 +6,15 @@ h2 {
 }
 p {
     background-color: violet;
+    color: blue;
+}
+ul {
+  background-color: beige;
+}
+#parrafo {
+    background-color: blanchedalmond;
+}
+.parrafo {
+    background-color: lightgrey;
+    color: gray
 }
