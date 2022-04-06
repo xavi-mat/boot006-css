@@ -1,7 +1,22 @@
+/* -------------------------------------------------------------------------- */
+/* --------- Fancy old-style letter stylesheet --------- */
+/* --------- by xavimat --------- */
+/* --------- 2022-04-06 --------- */
+/* -------------------------------------------------------------------------- */
+
+/* --------- FONTS ---------------- */
+/* --------- Fonts import --------- */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
+/* --------- Apply font to all tags --------- */
 * {
     font-family: 'Playfair Display', serif;
+}
+
+/* --------- TAG PROPERTIES ----------- */
+/* --------- Block containers --------- */
+html {
+    font-size: 18px;
 }
 
 body {
@@ -9,33 +24,105 @@ body {
     margin: auto;
     max-width: 800px;
 }
+
 main {
-    padding: 2rem;
+    padding: 2rem 3rem;
     background-color: antiquewhite;
+    background-image: url("img/parchment-tile.png");
+    position: relative;
 }
-.header {
-    text-align: right;
-}
-.address-strong {
-    font-weight: bold;
+h2 {
+    transform: skew(-20deg);
 }
 address {
     font-size: 110%;
-}
-a {
-    text-decoration: none;
-    color: maroon;
-    font-weight: bold;
-    padding: 0 0.5em;
-}
-a:hover {
-    background-color: #f6c2c2;
-    border-radius: 1em;
 }
 p, dl {
     text-align: justify;
     hyphens: auto;
     line-height: 150%;
+}
+p::first-letter {
+    color: maroon;
+    font-size: 2em;
+}
+dt {
+    margin-top: 1rem;
+    font-weight: bold;
+    word-spacing: 1rem;
+    word-wrap: break-word;
+}
+dd {
+    font-style: italic;
+}
+dd:first-line {
+    font-variant: small-caps;
+    font-style: normal;
+}
+ul li {
+    list-style-type: upper-roman;
+}
+ol li {
+    padding-bottom: 0.8em;
+}
+ol li:hover {
+    background-color: aliceblue;
+}
+li:first-child {
+    color: maroon;
+}
+h2::before, ul li::before, dd {
+    content: '✎ ';
+    color: maroon;
+}
+aside {
+    writing-mode: vertical-rl;
+    position: absolute;
+    height: 100%;
+    text-align: center;
+    top: 5px;
+    right: 5px;
+    font-size: 80%;
+}
+
+/* --------- Inline containers --------- */
+a {
+    text-decoration: none;
+    color: maroon;
+    font-weight: bold;
+    padding: 0 0.5em;
+    border-radius: 1em;
+}
+a:hover {
+    background-color: #f6c2c2;
+}
+q {
+    quotes: "«" "»" "“" "”";
+}
+abbr {
+    padding: 0 0.2em;
+    border-radius: 5px;
+    border: 2px solid #f30c0c88;
+}
+
+
+
+/* --------- ID TAGS --------- */
+#footer {
+    text-align: center;
+    margin-top: 5rem;
+    border-top: 1px solid black;
+}
+
+
+
+
+/* --------- CLASS TAGS --------- */
+.header {
+    text-align: right;
+}
+.address-strong {
+    font-weight: bold;
 }
 .motto-cite {
     font-style: italic;
@@ -44,19 +131,8 @@ p, dl {
 .signature {
     margin-top: 5rem;
 }
-dt {
-    margin-top: 1rem;
-    font-weight: bold;
-}
-dd {
-    font-style: italic;
-}
-#footer {
-    text-align: center;
-    margin-top: 5rem;
-    border-top: 1px solid black;
-}
 
+/* --------- Date-hover effect --------- */
 .date {
     border-radius: 1em;
     margin: 0 0.5em;
@@ -64,60 +140,27 @@ dd {
     border: 3px dotted transparent;
     font-style: italic;
     cursor: pointer;
+    transition: border 0.5s ease;
 }
 .date:hover {
-    border: 3px dotted purple;
+    border: 3px dotted maroon;
 }
 .remember {
-    display: none;
-    /* TODO */
+    opacity: 0;
+    padding-left: 3rem;
+    /* --------- TODO --------- */
     transition: all 1s ease;
 }
 .date:hover + .remember {
-    display: inline;
-
+    opacity: 100%;
+    padding-left: 0;
 }
 
-
-
-ul li {
-    list-style-type: upper-roman;
-}
-ol li:hover {
-    background-color: aliceblue;
-}
-
-ol li {
-    padding-bottom: 0.8em;
-}
-
-q {
-    quotes: "«" "»" "“" "”";
-}
-
+/* ------ This text has been incorrectly recognized by OCR after scan. ------ */
 .wrong {
     text-decoration: underline red wavy 1px;
 }
-.pabajo {
+
+.godown {
     vertical-align: text-top;
-}
-
-li:first-child {
-    color: maroon;
-}
-h2::before, ul li::before, dd {
-    content: '✎ ';
-    color: maroon;
-}
-
-p:first-line {
-    font-variant: small-caps;
-}
-p::first-letter {
-    color: maroon;
-    font-size: 2em;
-}
-
-p {
-    transform: skew(10deg);
 }
