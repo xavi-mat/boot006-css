@@ -63,10 +63,11 @@ ul li {
     list-style-type: upper-roman;
 }
 ol li {
-    padding-bottom: 0.8em;
+    padding: 0.8em;
+    border-radius: 15px;
 }
 ol li:hover {
-    background-color: aliceblue;
+    background-color: #ffffff66;
 }
 li:first-child {
     color: maroon;
@@ -148,7 +149,6 @@ abbr {
 .remember {
     opacity: 0;
     padding-left: 3rem;
-    /* --------- TODO --------- */
     transition: all 1s ease;
 }
 .date:hover + .remember {
